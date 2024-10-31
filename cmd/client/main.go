@@ -7,9 +7,10 @@ import (
 	"os/signal"
 	"syscall"
 
+	"go.uber.org/zap"
+
 	"github.com/sosnovski/test_work_2/client"
 	"github.com/sosnovski/test_work_2/internal/config"
-	"go.uber.org/zap"
 )
 
 func main() {

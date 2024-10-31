@@ -17,11 +17,11 @@ type ClientConfig struct {
 
 type ServerConfig struct {
 	ListenAddress           string        `envconfig:"default=:6543"`
-	Secret                  string        `envconfig:"default=some_default_secret" validate:"min=16"`
+	Secret                  string        `envconfig:""              validate:"min=16"`
 	ShutdownTimeout         time.Duration `envconfig:"default=5s"`
 	ReadTimeout             time.Duration `envconfig:"default=500ms"`
 	WriteTimeout            time.Duration `envconfig:"default=500ms"`
-	PowDifficulty           uint8         `envconfig:"default=18"                  validate:"min=0,max=255"`
+	PowDifficulty           uint8         `envconfig:"default=10"    validate:"min=0,max=255"`
 	ChallengeTimeout        time.Duration `envconfig:"default=400ms"`
 	ChallengeCacheTTL       time.Duration `envconfig:"default=500ms"`
 	ChallengeRandBytesCount int           `envconfig:"default=8"`

@@ -8,11 +8,12 @@ import (
 	"syscall"
 
 	"github.com/allegro/bigcache/v3"
+	"go.uber.org/zap"
+
 	"github.com/sosnovski/test_work_2/internal/config"
 	"github.com/sosnovski/test_work_2/internal/handler"
 	"github.com/sosnovski/test_work_2/internal/proto"
 	"github.com/sosnovski/test_work_2/internal/server"
-	"go.uber.org/zap"
 )
 
 const (

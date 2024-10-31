@@ -11,9 +11,10 @@ import (
 	"time"
 
 	"github.com/allegro/bigcache/v3"
+	"go.uber.org/zap"
+
 	"github.com/sosnovski/test_work_2/internal/pow"
 	"github.com/sosnovski/test_work_2/internal/proto"
-	"go.uber.org/zap"
 )
 
 var (

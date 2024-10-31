@@ -5,6 +5,9 @@ services:
       dockerfile: ./build/Dockerfile
       args:
         APP: 'server'
+    environment:
+      SECRET: 42a07f08-4a5a-49e1-8337-0f6c3134215f
+      POW_DIFFICULTY: 15
     ports:
       - '6543:6543'
 
