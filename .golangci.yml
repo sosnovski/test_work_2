@@ -1,0 +1,86 @@
+run:
+  timeout: 1m
+linters:
+  enable-all: true
+  disable:
+    - exportloopref
+    - gomnd
+    - execinquery
+    - funlen
+    - containedctx
+    - fatcontext
+    - testpackage
+    - dupword
+    - exhaustruct
+    - err113
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - gocritic
+        - exhaustruct
+        - maintidx
+  fix: true
+
+linters-settings:
+  lll:
+    line-length: 140
+
+  testifylint:
+    enable-all: true
+    disable:
+      - require-error
+
+  cyclop:
+    max-complexity: 15
+
+  govet:
+    enable-all: true
+    disable:
+      - shadow
+
+  exhaustive:
+
+
+  depguard:
+    rules:
+      prevent_unmaintained_packages:
+        list-mode: lax # allow unless explicitely denied
+        files:
+          - $all
+          - "!$test"
+        allow:
+          - $gostd
+        deny:
+          - pkg: io/ioutil
+            desc: "replaced by io and os packages since Go 1.16: https://tip.golang.org/doc/go1.16#ioutil"
+
+  varnamelen:
+    max-distance: 10
+    ignore-names:
+      - wg
+      - tx
+      - tt
+      - id
+
+  wrapcheck:
+    ignoreSigs:
+      - (context.Context).Err(
+      - .Errorf(
+
+  nolintlint:
+    require-explanation: true
+    require-specific: true
+    allow-unused: true
+
+  ireturn:
+    allow:
+      - anon
+      - error
+      - empty
+      - stdlib
+
+
+
+
