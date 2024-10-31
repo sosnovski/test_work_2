@@ -1,15 +1,15 @@
-# TCP server with POW protection from DDOS
+# TCP server with PoW protection from DDOS
 
 ## 1. Task description
 Design and implement some tcp server.
 
 - TCP server should be protected from DDOS attacks with the Prof of Work
 (https://en.wikipedia.org/wiki/Proof_of_work), the challenge-response protocol should be used.
-- The choice of the POW algorithm should be explained.
+- The choice of the PoW algorithm should be explained.
 - After Prof Of Work verification, server should send one of the quotes from "word of
 wisdom" book or any other collection of the quotes.
 - Docker file should be provided both for the server and for the client that solves the
-POW challenge.
+PoW challenge.
 
 ## 2. Getting started
 
@@ -96,7 +96,7 @@ However, despite the signature, the client can continue to reuse the solution wi
 Therefore, you should not indicate too much time for the client to solve the problem.
 In a production environment, this drawback can be eliminated by using a centralized cache.
 
-Structure used for POW:
+Structure used for PoW:
 ```go
 type Challenge struct {
 	Signature     []byte `json:"sig"`
@@ -123,7 +123,7 @@ Existing directories:
 + cmd/client - main.go for client
 + internal/config - config files for server and client
 + internal/handler - example handler
-+ internal/pow - logic of POW
++ internal/pow - logic of PoW
 + internal/proto - protocol implementation
 + internal/server - tcp server implementation
 
