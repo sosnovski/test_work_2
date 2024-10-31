@@ -40,7 +40,7 @@ make start
 ### 3.1 Request definition
 | RequestType | ResourceID | ContentLength |  Payload   |
 |:-----------:|:----------:|:-------------:|:----------:|
-|  [1]bytes   |  [1]bytes  |   [4]bytes    | [...]bytes |
+|  [1]bytes   |  [2]bytes  |   [4]bytes    | [...]bytes |
 
 #### 3.1.1 RequestType
 Request type can take one of the following values:
