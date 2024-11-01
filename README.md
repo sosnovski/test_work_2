@@ -96,6 +96,11 @@ However, despite the signature, the client can continue to reuse the solution wi
 Therefore, you should not indicate too much time for the client to solve the problem.
 In a production environment, this drawback can be eliminated by using a centralized cache.
 
+The server optionally accepts in-memory cache. 
+If the cache is nil, the server will not be able to check that it has already checked the Challange due to the request.
+This potentially makes it possible to send the same result of the completed 
+Challenge several times during its lifespan.
+
 Structure used for PoW:
 ```go
 type Challenge struct {
