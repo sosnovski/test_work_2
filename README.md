@@ -131,3 +131,4 @@ Existing directories:
 - Dynamic difficulty change.
 - Integrations tests.
 - Implement the ability to support handlers with request parameters.
+- Configuring client and server using options pattern
