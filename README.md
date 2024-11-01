@@ -130,3 +130,4 @@ Existing directories:
 ## 6. Possible improves
 - Dynamic difficulty change.
 - Integrations tests.
+- Implement the ability to support handlers with request parameters
